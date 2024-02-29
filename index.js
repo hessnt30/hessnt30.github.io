@@ -15,6 +15,10 @@ function initServerData(serverIp,serverPort){
         const motd = document.getElementById("motd");
         motd.innerHTML = data.motd_json;
 
+        const serverStatus = document.getElementById("server-status");
+        serverStatus.innerHTML = data.online ? 'is online' : 'is offline';
+        
+
         const playerCounter = document.getElementById("player-count");
         playerCounter.innerHTML = data.players.now;
 
@@ -31,8 +35,8 @@ function initServerData(serverIp,serverPort){
                     document.getElementById("player-list").appendChild(node);
                 }
             }
-            // console.log(key);
-            // console.log(data[key]);
+            console.log(key);
+            console.log(data[key]);
         }
     } 
 }
