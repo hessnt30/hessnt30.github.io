@@ -43,7 +43,7 @@ function initServerData(serverIp,serverPort){
 
                     // get the player's avatar
                     var img = new Image();
-                    img.src = "https://mineskin.eu/avatar/" + data.players.sample[i - 1].name;
+                    img.src = "https://mineskin.eu/helm/" + data.players.sample[i - 1].name;
                     img.alt = data.players.sample[i - 1].name + "'s Avatar";
 
                     // add the avatar pic to an avatar class
