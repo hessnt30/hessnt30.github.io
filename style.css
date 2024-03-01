@@ -1,23 +1,40 @@
 #header{
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 230px;
     margin-top: 150px;
     font-size: x-large;
+    text-align: center;
+}
+
+#header h1{
+    margin-bottom:0;
 }
 
 body{
-    background-color: #c5c5c5;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#body-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .container{
-    border: 2px outset #F9F9F8;
+    border: 2px #F9F9F8;
     background-color: #F9F9F8;
     border-radius: 10px;
     height: 485px;
-    margin-left: 230px;
     width: 800px;
-    height: 500px;
+    height: fit-content;
     padding: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
+    max-width: 800px;
 }
 
 #image{
@@ -49,7 +66,7 @@ body{
     margin-bottom: 10px;
 }
 
-#break{
+.break{
     border: 1px solid #d6d6d6;
     height: 0px;
     width: 720px;
@@ -57,6 +74,10 @@ body{
     margin-bottom: 15px;
     margin-left: 30px;
     border-radius: 10px;
+}
+
+#break2{
+    padding-top: 10px;
 }
 
 #server-ip-message{
@@ -89,14 +110,35 @@ body{
     border-radius: 5px;
     background-color: #d6d6d6;
     width: 750px;
+    margin-bottom: 15px;
 }
 
 #players{
-    margin-left: 10px;
-    font-size: large;
+    margin-left: 15px;
+}
+
+#player-list{
+    display: inline-flexbox;
+    padding-left: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+li{
     border: 2px solid #d6d6d6;
     border-radius: 5px;
     background-color: #d6d6d6;
-    width: 750px;
+    width: 360px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 10px;
     margin-top: 10px;
+}
+
+.avatar{
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 200px;
 }
