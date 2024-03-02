@@ -32,7 +32,6 @@ body{
     border-radius: 10px;
     height: 485px;
     width: 800px;
-    height: fit-content;
     padding: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding-bottom: 15px;
@@ -185,10 +184,94 @@ li:focus-visible {
 
 @media(max-width: 700px){
     .container{
-    flex-basis: 32%;
+    flex-basis: 70%;
     border-radius: 20px;
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
+    display: grid;
+    height: fit-content;
+    justify-content: center;
+    }
+
+    .tophalf{
+        display: grid;
+    }
+
+    #image{
+        justify-self: center;
+    }
+
+    #motd-container{
+        width: 40px;
+        margin: 0;
+        padding: 0;
+    }
+
+   
+
+    #motd-message{
+        width: 200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text-label{
+        margin-left: 290px;
+    }
+
+    #motd-label{
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    #server-ip-message{
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        margin-left: 302px;
+    }
+
+    #server-status-message{
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        margin-left: 302px;
+    }
+
+    #players-online{
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        margin-left: 302px;
+    }
+
+    #players{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    li {
+        border: 2px solid #1a1a1a;
+        border-radius: 5px;
+        background-color: #1a1a1a;
+        width: 200px;
+        list-style-type: none;
+        padding: 3px;
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 45px;
+        display: inline-flex;
+
+    }
+
+    .avatar{
+        width: 35px;
+        height: 35px;
+        padding-right: 5px;
+        margin-left: 75px;
+        float: right;
     }
 }
