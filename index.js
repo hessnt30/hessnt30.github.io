@@ -18,7 +18,7 @@ function initServerData(serverIp,serverPort){
         motd.innerHTML = data.motd_json;
 
         const serverStatus = document.getElementById("server-status");
-        serverStatus.innerHTML = data.online ? 'is online' : 'is offline';
+        serverStatus.innerHTML = data.online ? 'Online' : 'Offline';
         
 
         const playerCounter = document.getElementById("player-count");

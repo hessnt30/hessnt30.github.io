@@ -17,16 +17,26 @@
         
         <div id="body-container">
             <div class="container">
-                <div id="image">
-                    <img src=""  alt="Server Icon" id="server-icon"/>
+                <div class="tophalf">
+                    <div id="image">
+                        <img src=""  alt="Server Icon" id="server-icon"/>
+                    </div>
+                    <div id="motd-container">
+                        <label id="motd-label" class="text-label">MOTD</label>
+                        <div id="motd-message"><span id="motd">Message of the Day</span></div>
+                    </div>
                 </div>
-                <div id="motd-message"><span id="motd">Message of the Day</span></div>
+                    
+                
                 <div class="break" >
     
                 </div>
                 <div id="text" id="break2">
-                    <div id="server-ip-message">Server IP: <span id="server-ip">Server IP</span></div>
-                    <div id="server-status-message">Server <span id="server-status"></span></div>
+                    <label class="text-label">IP Address</label>
+                    <div id="server-ip-message"><span id="server-ip">Server IP</span></div>
+                    <label class="text-label">Status</label>
+                    <div id="server-status-message"><span id="server-status"></span></div>
+                    <label class="text-label">Players</label>
                     <div id="players-online"><span id="player-count"></span> Player(s) Online</div>
                     <div class="break"></div>
                     <div id="players">
