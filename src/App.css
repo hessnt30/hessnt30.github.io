@@ -1,0 +1,31 @@
+#root {
+  margin: 0 auto;
+}
+
+.social-icon {
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+  font-size: 2rem;
+
+  color: white;
+
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+
+  color: #cecece;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.carousel img {
+  max-width: 100%;
+  border-radius: 10px;
+}
