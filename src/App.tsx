@@ -38,14 +38,23 @@ function App() {
 
       <SectionTitle title="Projects" icon={faDiagramProject} />
 
-      <MundetProject />
-      <AppTrackProject />
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignContent: "center",
+        }}
+      >
+        <MundetProject />
+        <AppTrackProject />
+      </div>
 
       <SectionTitle title="Resume" icon={faFileLines} />
 
       <div
         style={{
-          width: "100vw",
+          width: "100%",
           marginTop: "2rem",
           display: "flex",
           justifyContent: "center",

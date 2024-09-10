@@ -1,5 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 type SectionTitleProps = {
   title: string;
@@ -7,13 +8,26 @@ type SectionTitleProps = {
 };
 
 function SectionTitle({ title, icon }: SectionTitleProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width threshold as needed
+    };
+
+    handleResize(); // Check on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       style={{
         display: "flex",
-        marginLeft: "8rem",
+        paddingLeft: isMobile ? "0" : "8rem",
         marginTop: "1rem",
-        width: "100vw",
+        width: "100%",
         paddingBottom: ".8rem",
         borderBottom: "1px solid #343434",
       }}

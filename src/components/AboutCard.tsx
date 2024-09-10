@@ -1,16 +1,31 @@
+import { useEffect, useState } from "react";
+
 type AboutCardProps = {
   header: string;
   body: string;
 };
 
 function AboutCard({ header, body }: AboutCardProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width threshold as needed
+    };
+
+    handleResize(); // Check on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div
       id="about-cards-wrapper"
       style={{
         display: "flex",
         justifyContent: "center",
-        width: "100vw",
+        width: isMobile ? "340px" : "100%",
+        margin: isMobile ? "0 auto" : "0",
       }}
     >
       <div
@@ -25,7 +40,7 @@ function AboutCard({ header, body }: AboutCardProps) {
             background: "linear-gradient(to right, #35236f, #57458f)",
             border: "1px solid #242424",
             borderRadius: "2rem",
-            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)"
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
           }}
         >
           <p
